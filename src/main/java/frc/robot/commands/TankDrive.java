@@ -22,7 +22,7 @@ public class TankDrive extends CommandBase {
 
   @Override
   public void initialize() {
-    m_drivetrain.stopBrake();
+    //m_drivetrain.stopBrake();
   }
 
   // Called every time the scheduler runs while the command is scheduled.
@@ -34,6 +34,6 @@ public class TankDrive extends CommandBase {
   @Override
   public void end(boolean interrupted) {
     m_drivetrain.tankDrive(0.0);
-    m_drivetrain.startBrake();
+    //m_drivetrain.startBrake();
   }
 }

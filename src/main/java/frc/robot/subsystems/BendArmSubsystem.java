@@ -22,6 +22,7 @@ public class BendArmSubsystem extends SubsystemBase {
 
   public BendArmSubsystem() {
     encoder.setPositionConversionFactor(ArmConstants.ARM_BEND_RADIUS_ENCODER);
+    bendArmMotor.setIdleMode(IdleMode.kBrake);
   }
 
   public void bend(Double speed) {

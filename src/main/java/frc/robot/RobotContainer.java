@@ -56,7 +56,6 @@ public class RobotContainer {
   private final Command m_autoExitShort = new Auto_ExitCommunity_Long(m_drivetrain);
   private final Command m_autoExitLong = new Auto_ExitCommunity_Short(m_drivetrain);
   public RobotContainer(Robot robot) {
-    m_drivetrain.startBrake();
     m_robot = robot;
     m_chargeDirectlyCommand = new Auto_ChargingDirectly(m_drivetrain, m_robot);
 

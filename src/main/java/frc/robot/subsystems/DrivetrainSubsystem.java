@@ -32,7 +32,9 @@ public class DrivetrainSubsystem extends SubsystemBase {
   private final RelativeEncoder leftEncoder = leftMotor1.getEncoder();
   private final RelativeEncoder rightEncoder = leftMotor2.getEncoder();
 
-  public DrivetrainSubsystem() {}
+  public DrivetrainSubsystem() {
+    startBrake();
+  }
 
   private final DifferentialDrive m_drive = new DifferentialDrive(m_leftMotors, m_rightMotors);
 

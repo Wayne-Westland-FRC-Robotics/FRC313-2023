@@ -30,7 +30,6 @@ public class ArmNeutralPID extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    m_armSub.startBrake();
     m_encoder = m_armSub.getEncoder();
     m_goalPosition = m_encoder.getPosition();
   }
@@ -49,7 +48,6 @@ public class ArmNeutralPID extends CommandBase {
   @Override
   public void end(boolean interrupted) {
     m_armSub.bend(0.0);
-    m_armSub.stopBrake();
   }
 
   // Returns true when the command should end.

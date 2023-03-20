@@ -25,7 +25,7 @@ public class BalanceCommand extends CommandBase {
 
   @Override
   public void initialize() {
-    m_drivetrain.startBrake();
+    //m_drivetrain.startBrake();
   }
 
   // Called every time the scheduler runs while the command is scheduled.
@@ -49,7 +49,7 @@ public class BalanceCommand extends CommandBase {
   @Override
   public void end(boolean interrupted) {
     m_drivetrain.tankDrive(0.0);
-    m_drivetrain.stopBrake();
+    //m_drivetrain.stopBrake();
   }
 
   // Returns true when the command should end.
